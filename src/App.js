@@ -7,6 +7,10 @@ import { Modal } from './components/UI/Modal/Modal'
 function App() {
   
   const [settings, setSettings] = useState(false)
+<<<<<<< HEAD
+=======
+  console.log(settings)
+>>>>>>> origin/master
   
   return (
     <header className={c.App}>
