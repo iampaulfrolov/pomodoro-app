@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import './App.module.sass'
+import c from './App.module.sass'
+import { Button } from './components/UI/Button/Button'
+import { Modal } from './components/UI/Modal/Modal'
 
 function App() {
+  
+  const [settings, setSettings] = useState(false)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <header className={c.App}>
+      <h1 className={c.HeaderTitle}>pomodoro</h1>
+      <div className={c.Switcher}/>
+      <div className={c.Clock}/>
+      
+      {
+        settings
+          ? <Modal/>
+          : null
+      }
+      <Button
+        setSettings={setSettings}
+        settings={settings}
+      />
+    </header>
+  )
 }
 
-export default App;
+export default App
