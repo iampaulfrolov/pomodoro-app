@@ -7,6 +7,7 @@ import { Modal } from './components/UI/Modal/Modal'
 function App() {
   
   const [settings, setSettings] = useState(false)
+  
   return (
     <header className={c.App}>
       <h1 className={c.HeaderTitle}>pomodoro</h1>
